@@ -1,0 +1,5 @@
+﻿<Solution>
+  <Project Path="Zenject.csproj" />
+  <Project Path="Zenject-Editor.csproj" />
+  <Project Path="Experiments.csproj" />
+</Solution>
