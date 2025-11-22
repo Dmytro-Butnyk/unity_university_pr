@@ -3671,7 +3671,7 @@ MonoBehaviour:
   _smoothSpeed: 0.125
   _offset: {x: 0, y: 2, z: -10}
   _minPosition: {x: 250, y: -60}
-  _maxPosition: {x: -60, y: 441}
+  _maxPosition: {x: 1138, y: 422}
 --- !u!114 &1345865645
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,8 +11,8 @@ namespace ProjectAssets.Scripts
         [SerializeField] private Vector3 _offset;
         
         [Header("Bounds")]
-        [SerializeField] private Vector2 _minPosition; // minimal world bound (x, y)
-        [SerializeField] private Vector2 _maxPosition; // maximal world bound (x, y)
+        [SerializeField] private Vector2 _minPosition;
+        [SerializeField] private Vector2 _maxPosition;
 
         private void Awake()
         {
@@ -21,13 +21,10 @@ namespace ProjectAssets.Scripts
 
         private void LateUpdate()
         {
-            // calculate desired position
             Vector3 targetPosition = _target.position + _offset;
 
-            // add interpolation for smooth movement
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, _smoothSpeed);
 
-            // restrict camera movement with world bounds
             float clampX = Mathf.Clamp(smoothedPosition.x, _minPosition.x, _maxPosition.x);
             float clampY = Mathf.Clamp(smoothedPosition.y, _minPosition.y, _maxPosition.y);
 
